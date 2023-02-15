@@ -38,10 +38,25 @@ body {
 
 .btn, .btn:link, .btn:visited {
   font-size: 1.8rem;
+}
+.btn--primary {
   color: #fff;
   background-color: var(--color-primary);
   padding: 1.4rem 2.8rem;
   border-radius: 5px;
+}
+.btn--primary:hover {
+  filter: brightness(110%);
+}
+.btn--secondary {
+  color: var(--color-primary);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: all 0.2s;
+}
+.btn--secondary:hover {
+  border-bottom: 2px solid currentColor;
+  letter-spacing: 1px;
 }
 
 .header {
@@ -58,6 +73,7 @@ body {
 
 .section-hero {
   margin-top: 4rem;
+  height: calc(100% - 14rem);
 }
 
 .hero {
@@ -91,10 +107,10 @@ body {
   letter-spacing: 2px;
 }
 .hero__content-social-icons {
-  margin-top: auto;
+  margin-top: 6rem;
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 2rem;
 }
 .hero__content-social-icons i {
   color: #7c7d83;
@@ -107,6 +123,95 @@ body {
 }
 .hero__image {
   width: 50%;
+}
+
+.section-projects {
+  padding: 4rem;
+  height: 100vh;
+}
+.section-projects h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  position: relative;
+}
+.section-projects h2::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  width: 5rem;
+  height: 5px;
+  background-color: var(--color-primary);
+}
+
+.projects {
+  margin-top: 6rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.project-card {
+  width: 100%;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.project-card__header {
+  padding: 0.3rem 1rem 0 0.3rem;
+  background-color: var(--color-primary);
+}
+.project-card__header img {
+  width: 3rem;
+}
+.project-card__picture {
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin: 0 2rem;
+  position: relative;
+}
+.project-card__picture::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: -1rem;
+  width: calc(100% + 2rem);
+  height: calc(100% - 2rem);
+  border: 2px solid #eee;
+}
+.project-card__picture--1 {
+  background-image: url(/assets/screenshot-1.png);
+}
+.project-card__picture--2 {
+  background-image: url(/assets/screenshot-2.png);
+}
+.project-card__about {
+  padding: 2rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+.project-card__about h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.project-card__about p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.project-card__about a {
+  margin-top: auto;
+}
+
+.footer {
+  background-color: var(--color-secondary);
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 2rem 0;
 }
 
 .container {
