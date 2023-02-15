@@ -1,0 +1,11 @@
+.btn {
+	&,
+	&:link,
+	&:visited {
+		font-size: 1.8rem;
+		color: #fff;
+		background-color: var(--color-primary);
+		padding: 1.4rem 2.8rem;
+		border-radius: 5px;
+	}
+}
