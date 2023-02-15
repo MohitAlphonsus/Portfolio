@@ -3,9 +3,28 @@
 	&:link,
 	&:visited {
 		font-size: 1.8rem;
+	}
+
+	&--primary {
 		color: #fff;
 		background-color: var(--color-primary);
 		padding: 1.4rem 2.8rem;
 		border-radius: 5px;
+
+		&:hover {
+			filter: brightness(110%);
+		}
+	}
+
+	&--secondary {
+		color: var(--color-primary);
+		border-bottom: 2px solid transparent;
+		padding-bottom: 2px;
+		transition: all 0.2s;
+
+		&:hover {
+			border-bottom: 2px solid currentColor;
+			letter-spacing: 1px;
+		}
 	}
 }
