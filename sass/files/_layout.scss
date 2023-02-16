@@ -7,9 +7,7 @@
 	}
 
 	&__header-bar {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		@include mixin.flexbox(row, center, space-between);
 	}
 
 	&__logo {
@@ -33,18 +31,14 @@
 }
 
 .hero {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	@include mixin.flexbox(row, center, space-between);
 
 	@include mixin.respond(tab-port) {
-		flex-direction: column;
+		@include mixin.flexbox(column, center, space-between);
 	}
 
 	&__content {
-		display: flex;
-		flex-direction: column;
-		align-items: start;
+		@include mixin.flexbox(column, start, start);
 		gap: 1.6rem;
 		align-self: stretch;
 
@@ -75,9 +69,8 @@
 		}
 
 		&-social-icons {
+			@include mixin.flexbox(row, center, start);
 			margin-top: 6rem;
-			display: flex;
-			align-items: center;
 			gap: 2rem;
 
 			i {
@@ -215,9 +208,8 @@
 	&__about {
 		padding: 2rem;
 		height: 20rem;
-		display: flex;
-		flex-direction: column;
-		align-items: start;
+
+		@include mixin.flexbox(column, start, start);
 		gap: 1rem;
 
 		h3 {

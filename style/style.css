@@ -69,6 +69,7 @@ body {
 }
 .header__header-bar {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
@@ -95,18 +96,23 @@ body {
 
 .hero {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 @media (max-width: 59.37em) {
   .hero {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .hero__content {
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: start;
   gap: 1.6rem;
   align-self: stretch;
 }
@@ -129,9 +135,11 @@ body {
   letter-spacing: 2px;
 }
 .hero__content-social-icons {
-  margin-top: 6rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: start;
+  margin-top: 6rem;
   gap: 2rem;
 }
 .hero__content-social-icons i {
@@ -257,6 +265,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: start;
   gap: 1rem;
 }
 .project-card__about h3 {
