@@ -13,6 +13,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -29,7 +30,6 @@ img {
 }
 
 body {
-  height: 100vh;
   color: var(--color-secondary);
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
@@ -62,6 +62,11 @@ body {
 .header {
   padding: 2rem 0;
 }
+@media (max-width: 68.75em) {
+  .header {
+    padding: 2rem;
+  }
+}
 .header__header-bar {
   display: flex;
   align-items: center;
@@ -75,11 +80,28 @@ body {
   margin-top: 4rem;
   height: calc(100% - 14rem);
 }
+@media (max-width: 59.37em) {
+  .section-hero {
+    height: auto;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 68.75em) {
+  .section-hero {
+    padding: 4rem;
+    margin-top: 6rem;
+  }
+}
 
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 59.37em) {
+  .hero {
+    flex-direction: column;
+  }
 }
 .hero__content {
   display: flex;
@@ -124,10 +146,15 @@ body {
 .hero__image {
   width: 50%;
 }
+@media (max-width: 59.37em) {
+  .hero__image {
+    width: 70%;
+  }
+}
 
 .section-projects {
   padding: 4rem;
-  height: 100vh;
+  margin-bottom: 4rem;
 }
 .section-projects h2 {
   font-size: 4rem;
@@ -146,8 +173,19 @@ body {
 
 .projects {
   margin-top: 6rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
+}
+@media (max-width: 59.37em) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 37.5em) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-card {
@@ -155,6 +193,33 @@ body {
   border-radius: 9px;
   overflow: hidden;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.project-card.in-development {
+  position: relative;
+}
+.project-card.in-development::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+.project-card.in-development::after {
+  content: "In Development";
+  display: grid;
+  place-content: center;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 2000;
 }
 .project-card__header {
   padding: 0.3rem 1rem 0 0.3rem;
