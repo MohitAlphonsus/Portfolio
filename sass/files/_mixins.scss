@@ -1,3 +1,11 @@
+@mixin flexbox($dir, $align, $just, $gap) {
+	display: flex;
+	flex-direction: $dir;
+	align-items: $align;
+	justify-content: $just;
+	gap: $gap;
+}
+
 @mixin respond($breakpoint) {
 	@if $breakpoint == phone {
 		@media (max-width: 37.5em) {
