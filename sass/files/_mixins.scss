@@ -1,9 +1,8 @@
-@mixin flexbox($dir, $align, $just, $gap) {
+@mixin flexbox($dir, $align, $just) {
 	display: flex;
 	flex-direction: $dir;
 	align-items: $align;
 	justify-content: $just;
-	gap: $gap;
 }
 
 @mixin respond($breakpoint) {
