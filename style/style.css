@@ -254,10 +254,13 @@ body {
   border: 2px solid #eee;
 }
 .project-card__picture--1 {
-  background-image: url(/assets/screenshot-1.png);
+  background-image: url(../assets/screenshot-1.png);
 }
 .project-card__picture--2 {
-  background-image: url(/assets/screenshot-2.png);
+  background-image: url(../assets/screenshot-2.png);
+}
+.project-card__picture--3 {
+  background-image: url(../assets/screenshot-3.png);
 }
 .project-card__about {
   padding: 2rem;
